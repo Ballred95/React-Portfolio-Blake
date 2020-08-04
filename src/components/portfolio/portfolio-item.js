@@ -18,13 +18,21 @@ export default class PortfolioItem extends Component {
     this.setState({ portfolioItemClass: "" });
   }
 
+  handleClick(description) {
+    console.log(`clicked ${description} `)
+    
+  }
+
   render() {
-    const { id, description, thumb_image_url, logo_url } = this.props.item;
+    const { id, description, thumb_image_url, logo_url, url } = this.props.item;
     return (
+      <a target='_blank' href={this.props.item.url}>
       <div
         className="portfolio-item-wrapper"
         onMouseEnter={() => this.handleMouseEnter()}
         onMouseLeave={() => this.handleMouseLeave()}
+        
+        onClick={() => this.handleClick(this.props.item.url)}
       >
         
         <div
@@ -44,6 +52,7 @@ export default class PortfolioItem extends Component {
           <div className="subtitle">{description}</div>
         </div>
       </div>
+      </a>
     );
   }
 }

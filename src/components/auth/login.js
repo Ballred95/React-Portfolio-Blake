@@ -38,17 +38,20 @@ export default class Login extends Component {
       .then(response => {
         if (response.data.status === 'created') {
             console.log('come on in');
+            this.props.handleSuccessfulAuth()
             
         } else{
             this.setState({
                 errorText: 'wrong credentials'
             })
+            this.props.handleUnsuccessfulAuth()
         }
       })
       .catch(error => {
           this.setState({
               errorText: 'an error occured'
           })
+          this.props.handleUnsuccessfulAuth()
       })
 
     event.preventDefault();

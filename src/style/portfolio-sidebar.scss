@@ -1,0 +1,36 @@
+.portfolio-sidebar-list-wrapper{
+    .portfolio-item-thumb{
+        padding: 21px;
+
+        .portfolio-thumb-img img {
+            width: 100%;
+        }
+        .title {
+            color: $offwhite;
+            font-size: 1.5rem;
+            margin-left: 0;
+        }
+    }
+}
+
+.port-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trashclass {
+    
+    font-size: 2rem;
+}
+
+.trashclass :hover {
+    cursor: pointer;
+    color: red;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
