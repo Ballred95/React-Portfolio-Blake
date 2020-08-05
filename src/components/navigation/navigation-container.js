@@ -47,11 +47,11 @@ import {NavLink} from 'react-router-dom'
                     contact
                 </NavLink>
                     </div>
-                    <div className = 'nav-link-wrapper'>
+                    {/* <div className = 'nav-link-wrapper'>
                 <NavLink exact to='/blog' activeClassName ="nav-link-active">
                     Blog
                 </NavLink>
-                    </div>
+                    </div> */}
 
                     { props.loggedInStatus === 'LOGGED_IN' ?   dynamicLink('./portfolio-manager', 'Portfolio Manager') : null}
                 
