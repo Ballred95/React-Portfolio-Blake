@@ -1,0 +1,16 @@
+.about-container {
+    display: flex;
+    margin: 5em;
+    background-color: $teal;
+
+    .p-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    p { text-align: center;
+        margin: 3em;
+        line-height: 3;
+
+    }
+}
+}
